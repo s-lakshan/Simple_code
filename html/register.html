@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Compatible" content="IE=edge">
+    <meta http-equiv="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Register page</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style1.css">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="slideshow">
+        <div class="slide1"></div>
+        <div class="slide2"></div>
+        <div class="slide3"></div>
+    </div>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="jk.png" alt="Logo">
+        </a>
+        
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Events</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="login.html" class="nav-button">Login</a>
+            <a href="register.html" class="nav-button">Register</a>
+        </nav>
+        
+            
+        
+    </header>
+    <div class="container">
+    <div class="title">Registeration</div>
+    <form action="verify.html">
+        <div class="user-details">
+        <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your Name" required>
+        </div>
+        <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter your Email" required>
+        </div>
+        <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Enter your Password" required>
+        </div>
+        <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" placeholder="Confirm your Name" required>
+        </div>
+        <div class="input-box">
+            <span class="details">Contact Number</span>
+            <input type="text" placeholder="Enter your Phone Number" required>
+        </div>
+        <div class="input-box">
+            <span class="details">Date of Birthday</span>
+            <input type="text" placeholder="Enter your Birthday" required>
+        </div>
+        <div class="input-box">
+            <span class="details">Blood type</span>
+            <input type="text" placeholder="Enter your Blood type" required>
+        </div>
+        <div class="input-box">
+            <span class="details">Last Donation Date</span>
+            <input type="text" placeholder="Enter your Last Donation Date" required>
+        </div>
+        </div>
+        <div class="gender-details">
+            <span class="gender-title">Gender</span>
+            <div class="category">
+                <label for="male">
+                    <span class="dot one"></span>
+                    <span class="gender">Male</span>
+                </label>
+                <input type="radio" id="male" name="gender" class="hidden">
+        
+                <label for="female">
+                    <span class="dot one"></span>
+                    <span class="gender">Female</span>
+                </label>
+                <input type="radio" id="female" name="gender" class="hidden">
+            </div>
+        </div>
+        <div class="button">
+            <input type="submit" value="Register">
+        </div>
+        </div>
+        
+
+
+    </form>
+    </div>
+
+    <script>
+        // JavaScript to hide/show the navigation bar on scroll
+        const header = document.querySelector('.header');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollTop = window.scrollY;
+
+            if (currentScrollTop > lastScrollTop) {
+                // Scrolling down, hide the navigation bar
+                header.classList.add('hide-navbar');
+            } else {
+                // Scrolling up, show the navigation bar
+                header.classList.remove('hide-navbar');
+            }
+
+            lastScrollTop = currentScrollTop;
+        });
+    </script>
+
+</body>
+</html>
+

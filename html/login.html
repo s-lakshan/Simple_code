@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Compatible" content="IE=edge">
+    <meta http-equiv="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Login page</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="jk.png" alt="Logo">
+        </a>
+        
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Events</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="login.html" class="nav-button">Login</a>
+            <a href="register.html" class="nav-button">Register</a>
+        </nav>
+        
+            
+        
+    </header>
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header>Login</header>
+                <form action="#" onsubmit="return validateForm()">
+                    <div class="field input-field">
+                        <input type="email" id="email" placeholder="Email" class="input">
+                    </div>
+                    <div class="field input-field">
+                        <input type="password" id="password" placeholder="Password" class="password">
+                        <!-- Updated class for the eye icon -->
+                        <i class='bx bxs-hide eyeicon' onclick="togglePassword()"></i>
+                    </div>
+                    <div class="form-link">
+                        <a href="#" class="forgot-pass">Forgot password?</a>
+                    </div>
+                    <div class="field button-field">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+                <div class="form-link">
+                    <span>Already have an account? <a href="register.html" class="register-link">Register Now</a></span>
+                </div>
+            </div>
+            <div class="line"> </div>
+            <div class="media-option">
+                <a href="#" class="field facebook">
+                    <i class='bx bxl-facebook facebook-icon'></i>
+                    <span>Login with Facebook</span>
+                </a>
+            </div>
+            <div class="media-option">
+                <a href="#" class="field google">
+                    <img src="google.png" alt="" class="google-img">
+                    <span>Login with Google</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <script>
+        let eyeicon = document.querySelector(".eyeicon");
+        let password = document.querySelector("#password");
+
+        function togglePassword() {
+            if (password.type === "password") {
+                password.type = "text";
+                eyeicon.classList.remove("bxs-hide");
+                eyeicon.classList.add("bxs-show");
+            } else {
+                password.type = "password";
+                eyeicon.classList.remove("bxs-show");
+                eyeicon.classList.add("bxs-hide");
+            }
+        }
+
+        function validateForm() {
+            let email = document.getElementById("email").value;
+            let passwordValue = password.value;
+
+            // Email validation (basic check)
+            if (!/^\S+@\S+\.\S+$/.test(email)) {
+                alert("Invalid email address");
+                return false;
+            }
+
+            // Password validation (at least 8 characters)
+            if (passwordValue.length < 8) {
+                alert("Password must be at least 8 characters long");
+                return false;
+            }
+
+            // Add more password validation rules as needed
+
+            return true; // Form submission allowed
+        }
+        
+        function toggleNav() {
+            var navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    
+    </script>
+</body>
+
+</html>
+

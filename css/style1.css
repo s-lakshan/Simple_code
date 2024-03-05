@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,500&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url(blood.jpg) no-repeat center center; /* Use background shorthand property */
+    background-size: cover;
+    transition: background-image 1s ease;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 350px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+.navbar a {
+    position: relative;
+      font-size: 18px;
+      color: #fff;;
+      font-weight: 500;
+      text-decoration: none;
+      margin-left: 40px;
+}
+.hide-navbar {
+    display: none;
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: 0.3s;
+}
+.navbar a:hover::before{
+    width:100%;
+
+}
+.nav-button {
+    margin-left: 20px;
+    padding: 8px 16px;
+    background-color: #0171d3;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #016dcb;
+}
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    margin-top: 130px;
+    position: relative; /* Add position relative for the z-index */
+    z-index: 1; /* Ensure the form is above the slideshow */
+}
+.slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: slideshow 12s infinite;
+    overflow: hidden;
+}
+
+@keyframes slideshow {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    25% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    75% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+}
+
+.slide1, .slide2, .slide3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(70%);
+}
+
+.slide1 {
+    background-image: url('blood.jpg'); /* Replace with your image URL */
+}
+
+.slide2 {
+    background-image: url('up.jpg'); /* Replace with your image URL */
+}
+
+.slide3 {
+    background-image: url('tr.jpg'); /* Replace with your image URL */
+}
+
+
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+
+}
+.container .title ::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 30px;
+  
+}
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+
+}
+form .user-details .input-box{
+   margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+
+}
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+}
+form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .gender-details .category {
+    display: flex;
+    width: 80%;
+    justify-content:space-between;
+}
+
+form .gender-details .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Optional: Adjust the margin to your preference */
+form .gender-details .category label:not(:last-child) {
+    margin-right:-350px;
+}
+
+form .button{
+    height: 45px;
+    margin: 45px 0;
+
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: #0171d3;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+form .button input:hover {
+    
+    background-color: #016dcb;
+    
+}
+
+
+
+
+
+
+
+
+
